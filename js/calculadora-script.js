@@ -240,6 +240,7 @@ new Chart(chartPaso5_2, {
   },
 });
 
+/*
 $(document).ready(function(){
   $('#incostUniSI, #incostUniJad, #incostUniImp').on('input', function() {
     var val1 = parseFloat($('#incostUniSI').val()) || 0;
@@ -250,3 +251,4 @@ $(document).ready(function(){
     chartPaso2Act.update();
   });
 })
+*/

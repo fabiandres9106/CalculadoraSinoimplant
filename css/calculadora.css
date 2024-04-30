@@ -93,9 +93,10 @@ min-height: 50vh;
 }
 
 .titles-paso2{
-  margin-top: 2.4rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
   font-weight: bold;
-  line-height: 1.55rem;
+  line-height: 1.6rem;
 }
 
 .input-paso2{
@@ -123,9 +124,16 @@ min-height: 50vh;
   padding: 1rem 0;
 }
 
+.card-head{
+  min-height: 70px;
+}
+
 .card-title{
-  padding-bottom: 1rem;
-  border-bottom: solid 1px #fff;
+  padding-bottom: rem;
+}
+
+.card-title.logo-sinoimplant{
+  font-size: 2rem;
 }
 
 .card-chart-paso2{

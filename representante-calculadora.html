@@ -135,7 +135,7 @@
                     <h5>Algunos datos para tener en cuenta...</h5>
                     <div class="content-fluid cards-paso2 py-3">
                       <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                           
                           <div class="content-fluid text-center">
                             <div class="row">
@@ -158,7 +158,7 @@
                                     <h5 class="card-title logo-sinoimplant">Sinoimplant</h5>
                                     <div>Imp Sub + Kit</div>
                                     <div>$ <input id="incostUniSI" class="input-paso2 form-control" type="number" /></div>
-                                    <div>$ 10.000,00</div><input type="hidden" id="inAplicacionSI" value="10000">
+                                    <div>$ 10.000</div><input type="hidden" id="inAplicacionSI" value="10000">
                                     <div><span id="costTotalSI">$ 0</span></div><input type="hidden" id="incostTotalSI">
                                     <div>4</div><input type="hidden" id="induracionSI" value="4">
                                     <div><span id="costAnualSI">$ 0</span></div><input type="hidden" id="incostAnualSI">
@@ -172,7 +172,7 @@
                                     <h5 class="card-title">Jadell</h5>
                                     <div>Imp Sub</div>
                                     <div>$ <input id="incostUniJad" class="input-paso2 form-control" type="number" /></div>
-                                    <div>$ 30.000,00</div><input type="hidden" id="inAplicacionJad" value="30000">
+                                    <div>$ 10.000</div><input type="hidden" id="inAplicacionJad" value="30000">
                                     <div><span id="costTotalJad">$ 0</span></div><input type="hidden" id="incostTotalJad">
                                     <div>5</div><input type="hidden" id="induracionJad" value="5">
                                     <div><span id="costAnualJad">$ 0</span></div><input type="hidden" id="incostAnualJad">
@@ -186,7 +186,7 @@
                                     <h5 class="card-title">Implanon</h5>
                                     <div>Imp Sub + Pistola</div>
                                     <div>$ <input id="incostUniImp" class="input-paso2 form-control"  type="number" /></div>
-                                    <div>$ 30.000,00</div><input type="hidden" id="inAplicacionImp" value="30000">
+                                    <div>$ 30.000</div><input type="hidden" id="inAplicacionImp" value="30000">
                                     <div><span id="costTotalImp">$ 0</span></div><input type="hidden" id="incostTotalImp">
                                     <div>3</div><input type="hidden" id="induracionImp" value="3">
                                     <div><span id="costAnualImp">$ 0</span></div><input type="hidden" id="incostAnualImp">
@@ -198,10 +198,29 @@
                           </div>
                         </div>
                       
+                        <!--
                         <div class="col-md-4">
                           <div class="card card-chart-paso2">                     
                             <div class="card-body">
                               <canvas class="my-4" id="chartPaso2"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                        -->
+                      </div>
+                      <!-- INFO -->
+                      <div class="content notification">
+                        <div class="row">
+                          <div class="col-md-3">
+                          </div>
+                          <div class="d-flex flex-wrap flex-md-nowrap align-items-top">
+                            <div>
+                              <span class="bubble-notification bubble-info"><i class="bi bi-info-circle"></i></span>
+                            </div>
+                            <div class="alert alert-info" role="alert">
+                              <strong>Nota: </strong>Los precios expuestos en la calculadora varían de acuerdo al canal, cliente y al volumen de compra del tercero.<br>
+                              La información que se alimenta dentro de la plataforma, es proporcionada por el cliente.
+                              Abbott EPD Colombia no tiene inherencia ni participación de asignación de precios.
                             </div>
                           </div>
                         </div>

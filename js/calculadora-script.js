@@ -59,7 +59,7 @@ inputEmpresaCalculadora.addEventListener('keyup', function(){
 // CHARTS
 
 // Chart Paso 2
-
+/*
 const chartPaso2 = document.getElementById('chartPaso2');
 const dataPaso2 = {
   labels: ['Sinoimplant', 'Jadell', 'Implanon'],
@@ -103,6 +103,8 @@ var chartPaso2Act = new Chart(chartPaso2, {
     },
     
   });
+
+  */
 
 // Chart Paso 3
 

@@ -1,7 +1,7 @@
 addEventListener('load',actualizarDatos,false);
 addEventListener('load',probar,false);
 function probar(){
-    console.log('probando');
+    //console.log('probando');
 }
 
 var shEjecutivoEmpresa=document.getElementById('shEjecutivoEmpresa');
@@ -119,7 +119,7 @@ function actualizarDatos(){
     conexion.onreadystatechange=procesarEventoLoadBasicData;
     conexion.open('GET','https://eduniversal.com.co/sinoimplant/bbdd/qBasicData.php?documento='+'1', true);
     conexion.send();
-    console.log('programando');
+    //console.log('programando');
 }
 function actualizarEjecutivo(){
     shEjecutivoEmpresa.classList.remove('visually-hidden');
@@ -127,27 +127,27 @@ function actualizarEjecutivo(){
 }
 function actualizarCostoSI(){
     var valCostoTotalSI=parseInt(incostUniSI.value)+parseInt(inAplicacionSI.value);
-    costTotalSI.innerHTML=valCostoTotalSI.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'});
+    costTotalSI.innerHTML=valCostoTotalSI.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostTotalSI.value=parseInt(incostUniSI.value)+parseInt(inAplicacionSI.value);
     var valCostoAnualSI=parseInt(incostTotalSI.value)/parseInt(induracionSI.value); 
-    costAnualSI.innerHTML=valCostoAnualSI.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'});
+    costAnualSI.innerHTML=valCostoAnualSI.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostAnualSI.value=parseInt(incostTotalSI.value)/parseInt(induracionSI.value);
 }
 function actualizarCostoJad(){
     var valCostoTotalJad=parseInt(incostUniJad.value)+parseInt(inAplicacionJad.value);
-    costTotalJad.innerHTML=valCostoTotalJad.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'});
+    costTotalJad.innerHTML=valCostoTotalJad.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostTotalJad.value=parseInt(incostUniJad.value)+parseInt(inAplicacionJad.value);
     var valCostoAnualJad=parseInt(incostTotalJad.value)/parseInt(induracionJad.value);
     incostAnualJad.value=parseInt(incostTotalJad.value)/parseInt(induracionJad.value);
-    costAnualJad.innerHTML=valCostoAnualJad.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'});
+    costAnualJad.innerHTML=valCostoAnualJad.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
 }
 function actualizarCostoImp(){
     var valCostoTotalImp=parseInt(incostUniImp.value)+parseInt(inAplicacionImp.value)
-    costTotalImp.innerHTML=valCostoTotalImp.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'});
+    costTotalImp.innerHTML=valCostoTotalImp.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostTotalImp.value=parseInt(incostUniImp.value)+parseInt(inAplicacionImp.value);
     var valCostoAnualImp=parseInt(incostTotalImp.value)/parseInt(induracionImp.value);
     incostAnualImp.value=parseInt(incostTotalImp.value)/parseInt(induracionImp.value);
-    costAnualImp.innerHTML=valCostoAnualImp.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'}); 
+    costAnualImp.innerHTML=valCostoAnualImp.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'}); 
 }
 function procesarEventoLoadBasicData(){
     if(conexion.readyState==4){

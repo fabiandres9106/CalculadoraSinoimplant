@@ -6,7 +6,7 @@ function probar(){
 
 var shEjecutivoEmpresa=document.getElementById('shEjecutivoEmpresa');
 var shEjecutivo=document.getElementById('shEjecutivo');
-var shEmpresa=document.getElementById('shEmpresa');
+//var shEmpresa=document.getElementById('shEmpresa');
 var nombreEjecutivo=document.getElementById('nombreEjecutivo');
 nombreEjecutivo.addEventListener('keyup',actualizarEjecutivo,false);
 

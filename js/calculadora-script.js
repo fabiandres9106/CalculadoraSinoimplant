@@ -1,25 +1,60 @@
 
-
 // SLIDE 1
 
-// Selector input entidad o municipio
 $(document).ready(function(){
-    $('#selectTipoEntidad').change(function() {
-        var seleccionado = $(this).val();
-        $('.inputSelectEntidad').removeClass('active');
-        $('#input-' + seleccionado).addClass('active');
-    });
 
-    $('#btnIngresar').click(function(){
-        //cambiar de tab
-        $('.tab-pane').removeClass('show active');
-        $('#pills-Paso2').addClass('show active');
-        //cambiar de botón
-        $('.nav-link').removeClass('active');
-        $('#pills-Paso2-tab').addClass('active');
-        $('#calculadora-navegacion').removeClass('visually-hidden');
-    })
+  $('#btnIngresar').click(function(){
+      //cambiar de tab
+      $('.tab-pane').removeClass('show active');
+      $('#pills-Paso2').addClass('show active');
+      //cambiar de botón
+      $('.nav-link').removeClass('active');
+      $('#pills-Paso2-tab').addClass('active');
+      $('#calculadora-navegacion').removeClass('visually-hidden');
+  })
 })
+
+
+// Selector input entidad o municipio
+const selectEntidad = document.getElementById('selectTipoEntidad');
+const inputEmpresaCalculadora = document.getElementById('empresaCalculadora');
+
+selectEntidad.addEventListener('change', function(){
+  const entidadSeleccionada = selectEntidad.value;
+  actInputEntidadPlaceHolder(entidadSeleccionada);
+});
+
+function actInputEntidadPlaceHolder(opcionSeleccionada){
+  switch (opcionSeleccionada) {
+    case 'ONG':
+      inputEmpresaCalculadora.placeholder = "Ingrese ONG";
+      break;
+    case 'Fundación':
+      inputEmpresaCalculadora.placeholder = "Ingrese Fundación";
+      break;
+    case 'EPS':
+      inputEmpresaCalculadora.placeholder = "Ingrese EPS";
+      break;
+    case 'IPS':
+      inputEmpresaCalculadora.placeholder = 'Ingrese IPS';
+      break;
+    case 'Secretaría de Salud':
+      inputEmpresaCalculadora.placeholder = "Ingrese Secretaría de Salud";
+      break;
+    case 'Municipio':
+      inputEmpresaCalculadora.placeholder = "Ingrese Municipio"
+      break
+    default:
+      inputEmpresaCalculadora.placeholder = "Ingrese entidad";
+  }
+}
+
+// Añadir entidad junto a nombre de doctor
+inputEmpresaCalculadora.addEventListener('keyup', function(){
+  const shEmpresa = document.getElementById('shEmpresa');
+  shEmpresa.innerHTML= inputEmpresaCalculadora.value;
+})
+
 
 // CHARTS
 

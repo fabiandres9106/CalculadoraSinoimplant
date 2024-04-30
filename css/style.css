@@ -1,0 +1,296 @@
+/* FUENTES */
+
+@font-face {
+  font-family: 'Halifax';
+  src: url('../fonts/HalifaxExtraBoldItalic.ttf') format('opentype');
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/brandon-grotesque-black-58c70b9120a4e.otf') format('opentype');
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon_bld_it.otf') format('opentype');
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon_light.otf') format('opentype');
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon_med.otf') format('opentype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/BrandonGrotesque-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/Brandon_thin.otf') format('opentype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+/* GENERALES */
+:root{
+  --bs-sinoimplant-primary: #AA0061;
+}
+
+.btn-sinospace{
+  background: #AA0061;
+  color: #fff;
+}
+
+.btn-sinospace:hover{
+  background: #db1385;
+  color: #fff;
+}
+
+main{
+  min-height: 82vh;
+}
+
+/* NAVBAR */
+
+.bg-nav-sinoimplant{
+background-color: var(--bs-sinoimplant-primary) !important;
+}
+ 
+
+/* Logos */
+.logo-sinoimplant{
+  font-family: 'Halifax';
+  font-size: 1.3rem;
+}
+
+.logo-abbott{
+  width: 100px;
+}
+
+.logo-women{
+  font-family: 'Brandon';
+  font-style: italic;
+  color: #004F71;
+  font-size: 1.5rem;
+}
+
+hr{
+  color: #dee2e6;
+  opacity: 1;
+}
+
+.title-sinoimplant{
+  margin: 2rem 0 1rem;
+  padding:0;
+}
+
+.title-sinoimplant .row>*{
+  padding: 0;
+}
+
+/* IMAGEN USUARIO */
+.circle-user {
+display: inline-flex;
+background: #009CDE;
+border-radius: 50%;
+width: 32px;
+height: 32px;
+align-items: center;
+justify-content: center;
+color: #fff;
+font-weight: 900;
+font-size: 0.9rem;
+font-family: 'Brandon';
+}
+
+/* DROPDOWN-TOOGLE USUARIO */
+.dropdown-toggle::after{
+  color: #fff;
+}
+  
+  
+/* ICONOS */
+
+.bi-list-sinospace{
+font-size: 1.3rem;
+width: 1.3rem !important;
+height: 1.3rem !important;
+}
+
+.bi-sinospace {
+vertical-align: -.125em;
+fill: currentColor;
+display: inline-block;
+width: 1rem;
+height: 1rem;
+}
+
+/* NOTIFICACIONES */
+
+.notification{
+margin: 1.5rem 0;
+}
+
+.notification .row, .notification .row>*{
+padding: 0;
+}
+
+.notification .alert{
+  padding: .8rem;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.bubble-notification{
+  display: inline-flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.9rem;
+  font-family: 'Brandon';
+  margin-right: .5rem;
+  width: 30px;
+  height: 30px;
+}
+
+.bubble-notification .bi{
+  margin:0
+}
+
+.bubble-alert{
+  background: #fff3cd;
+  color: #664d03;
+  border: solid 1px #ffe69c;
+}
+
+.bubble-info{
+  background: #cff4fc;
+  color: #055160;
+  border: solid 1px #9eeaf9;
+}
+
+.bubble-success{
+  background: #d1e7dd;
+  color: #0a3622;
+  border: solid 1px #a3cfbb;
+}
+
+.bubble-danger{
+  background: #f8d7da;
+  color: #58151c;
+  border: solid 1px #f1aeb5;
+}
+
+
+/* CARDS ACTUALIZACIONES */
+
+.resumen-index{
+  padding-left: 3rem;
+}
+
+.card-actualizacion p{
+margin: 0;
+}
+
+.ult-actualizacion{
+  color: #AA0061;
+}
+
+.bubble-success2{
+  background: #00B140;
+  color: #fff;
+  border: solid 1px #00B140;
+  font-size: 1.5rem;
+  margin-left: -40px;
+}
+
+.bubble-alert2{
+  background: #FFBD59;
+  color: #fff;
+  border: solid 1px #FFBD59;
+  font-size: 1.5rem;
+  margin-left: -40px;
+}
+
+.tooltip-actualizado{
+  --bs-tooltip-bg: #00B140;
+  --bs-tooltip-color: #fff;
+}
+
+.tooltip-desactualizado{
+  --bs-tooltip-bg: #FFBD59;
+}
+
+/* CARD CALCULADORA */
+
+.access-calculadora .row>*{
+  margin: 0;
+}
+
+.card-calculadora{
+  background: url('../img/bg2Calculadora.jpg');
+  color: #fff;
+  margin-top: 3rem;
+}
+
+.card-calculadora h1{
+  margin-bottom: 0;
+  padding-top: .7rem;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.icono-calculadora{
+  width: 3rem;
+  margin-right: 1rem;
+  vertical-align: baseline;
+}
+
+.btn-calculadora .bi{
+  color: #fff;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.input-actualizacion{
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  width: 100px;
+}
+
+.data-actualizacion h6{
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+.input-actualizacion-file{
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  width: 500px;
+}

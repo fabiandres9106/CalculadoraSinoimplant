@@ -1,0 +1,228 @@
+/* CALCULADORA */
+
+.calculadora{
+  background: #D9D9D9;
+  background-image: url('../img/bgCalculadora.jpg');
+}
+
+.icono-calculadora{
+  width: 1.5rem;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: .5rem;
+  vertical-align: -.125em;
+}
+
+.calculadora-title h2{
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.calculadora .tab-content{
+min-height: 50vh;
+}
+
+.btn-sinospace{
+  background: #AA0061;
+  color: #fff;
+  padding: .5rem 3rem;
+  border-radius: 10px;
+}
+
+.form-control, .form-select{
+  padding: .5rem 1rem;
+  border-radius: 10px;
+}
+
+.card{
+  border: 0;
+}
+
+/* NAV */
+
+.nav-link.calculadora-nav {
+  color: #B3B3B3;
+  border: solid 2px;
+  border-radius: 50% !important;
+  font-weight: 500;
+  margin: 0 1rem;
+}
+
+.nav-link.calculadora-nav.active{
+  background-color: #AA0061 !important;
+  border: #AA0061 solid 2px;
+  font-size: 1rem;
+}
+
+#pills-before, #pills-after{
+  border: none;
+  font-weight: 500;
+  color: #AA0061;
+  font-size: 2rem;
+  vertical-align: -.125em;
+  margin: 0;
+}
+
+#pills-before .bi, #pills-after .bi{
+  margin: 0;
+}
+
+/* PASO 1 */
+
+#pills-Paso1{
+  width: 50%;
+  margin-top: 100px;
+}
+
+.inputSelectEntidad{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Transición de opacidad durante 0.5 segundos */
+}
+
+.inputSelectEntidad.active{
+    display: block;
+    opacity: 1;
+}
+
+/* PASO 2 */
+
+.cards-paso2 .row>*{
+  margin: 0;
+  padding: .5rem;
+}
+
+.titles-paso2{
+  margin-top: 2.4rem;
+  font-weight: bold;
+  line-height: 1.55rem;
+}
+
+.input-paso2{
+  padding: 0;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  width: 70%;
+  height: 20px;
+}
+
+.card-paso2{
+  border-radius: 20px;
+  background: #B3B3B3;
+  border: 0;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.card-sinoimplant{
+  background: #AA0061;
+  color: #fff;
+  border-radius: 20px;
+  border: 0;
+  padding: 1rem 0;
+}
+
+.card-title{
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #fff;
+}
+
+.card-chart-paso2{
+  padding: 1rem 0;
+  border-radius: 20px;
+}
+
+/* Paso 3 */
+
+table.table-calculadora{
+  --bs-table-bg: none;
+  border: 0;
+  margin: 2rem 0;
+}
+
+.table-calculadora td, .table-calculadora th{
+  border: 0;
+}
+
+.table-calculadora .form-control {
+  padding: 0 10px;
+  text-align: right;
+  width: 100px;
+  display: inline-block;
+}
+
+.table-calculadora .form-select{
+  padding: 0 10px;
+}
+
+.card-graph-paso3{
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Paso 4*/
+.table-paso4{
+  border-radius: 10px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, .6);
+  margin: 2rem 0;
+}
+
+.table-paso4 .table-calculadora{
+  margin: 0;
+}
+
+.select-paso4{
+  display: inline-block;
+  width: 50%;
+  padding: 0 10px;
+  margin-left: 1rem;
+}
+
+/* Paso 5*/
+
+.info-paso5{
+  padding: 1rem;
+}
+
+.info-paso5 p{
+  line-height: 1.3rem;
+  margin-bottom: 0;
+}
+
+.info-sinoimplant{
+  border: 2px solid #AA0061;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.info-sinoimplant .logo-sinoimplant, .paso5-graph .logo-sinoimplant{
+  color: #AA0061;
+}
+
+.info-paso5 h6{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.paso5-graph{
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 10px;
+}
+
+.paso5-graph h5{
+  font-weight: bold;
+}
+
+.paso5-chart{
+  height: 80px;
+}
+
+
+.item-1{ color: #31356E; }
+.item-2{ color: #2F5F98; }
+.item-3{ color: #2D8BBA; }
+.item-4{ color: #41B8D5; }
+.item-5{ color: #57D3FF; }
+

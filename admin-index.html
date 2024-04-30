@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/sidebar.css">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sticky-top bg-nav-sinoimplant flex-md-nowrap p-0">
+    <div class="container-fluid p-0 py-3">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start text-white">
+        <a id="menu-toggle" href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+          <button class="nav-link text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list" id="main-icon"></i>
+          </button>
+        </a>
+        <a class="navbar-brand col-12 col-lg-auto me-lg-auto mb-2 mb-md-0 fs-6" href="#">
+          <span class="logo-sinoimplant">Sinoimplant</span>
+        </a>
+        <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <a>Mi Usuario</a>
+        </div>
+        <div class="dropdown text-end pe-4">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="circle-user">MU</span> <!-- [INICIALES NOMBRE USUARIO] -->
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+          </ul>
+        </div>
+      </div>      
+    </div>
+
+  </header>
+
+  <!-- CONTENT -->
+  <div id="wrapper" class="active">
+  
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav" id="sidebar">   
+            <li><a href="#" class="active"><i class="bi bi-house-door-fill" data-bs-toggle="tooltip" data-bs-title="Inicio" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text" >Inicio</span></a></li>
+            <li><a href="#"><i class="bi bi-calculator-fill" data-bs-toggle="tooltip" data-bs-title="Calculadora" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Calculadora</span></a></li>
+            <li><a href="#"><i class="bi bi-bar-chart" data-bs-toggle="tooltip" data-bs-title="Reportes" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Reportes</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-arrow-repeat" data-bs-toggle="tooltip" data-bs-title="Actualizaciones" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Actualizaciones</span></a>
+              <ul class="dropdown-menu text-small">
+                <li><a class="dropdown-item" href="#">% de Tasa de fecunidad en Colombia</a></li>
+                <li><a class="dropdown-item" href="#">Embarazos no intencionales</a></li>
+                <li><a class="dropdown-item" href="#">Mortalidad Materna</a></li>
+                <li><a class="dropdown-item" href="#">Manual Tarifario SOAT</a></li>
+                <li><a class="dropdown-item" href="#">Mujeres en edad fertil</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="bi bi-person-circle" data-bs-toggle="tooltip" data-bs-title="Perfil" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Perfil</span></a></li>
+            <li><a href="#"><i class="bi bi-power" data-bs-toggle="tooltip" data-bs-title="Cerrar Sesión" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Cerrar Sesión</span></a></li>
+          </ul>
+        </div>
+    
+        
+        <div id="page-content-wrapper">
+
+          <!-- Keep all page content within the page-content inset div! -->
+          <div class="page-content inset">
+            <!-- MAIN -->
+            <main>
+  
+              <!-- LOGOS ABBOTT -->
+              <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 px-5 mb-3">
+                <img src="img/LogoABBOTTHorizon.svg" alt="Logo Aboot" class="logo-abbott"/>
+                <h5 class="h5 logo-women">Women's Health</h4>
+              </div>
+      
+              <div class="container-fluid px-5">
+                
+                <hr />
+
+                <!-- SECCION NOTICIAS -->
+                <div class="row mt-5">
+                  <div class="col-md-8 offset-md-2">
+                    <h6>Hola, Mi Usuario</h6>
+
+                    <!-- ALERT -->
+                    <div class="content notification">
+                      <div class="row">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-top">
+                          <div>
+                            <span class="bubble-notification bubble-alert"><i class="bi bi-exclamation-triangle"></i></span>
+                          </div>
+                          <div class="alert alert-warning" role="alert">
+                            La última actualización de la plataforma fue realizada el 26/03/2024. Recuerda solicitar al proveedor la información correspondiente para futuras actualizaciones.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- INFO -->
+                    <div class="content notification">
+                      <div class="row">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-top">
+                          <div>
+                            <span class="bubble-notification bubble-info"><i class="bi bi-info-circle"></i></span>
+                          </div>
+                          <div class="alert alert-info" role="alert">
+                            La última actualización de la plataforma fue realizada el 26/03/2024. Recuerda solicitar al proveedor la información correspondiente para futuras actualizaciones.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="content notification">
+                      <div class="row">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-top">
+                          <div>
+                            <span class="bubble-notification bubble-success"><i class="bi bi-check-circle"></i></span>
+                          </div>
+                          <div class="alert alert-success" role="alert">
+                            La última actualización de la plataforma fue realizada el 26/03/2024. Recuerda solicitar al proveedor la información correspondiente para futuras actualizaciones.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- DANGER -->
+                    <div class="content notification">
+                      <div class="row">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-top">
+                          <div>
+                            <span class="bubble-notification bubble-danger"><i class="bi bi-x-square"></i></span>
+                          </div>
+                          <div class="alert alert-danger" role="alert">
+                            La última actualización de la plataforma fue realizada el 26/03/2024. Recuerda solicitar al proveedor la información correspondiente para futuras actualizaciones.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+      
+                <!-- SECCIÓN GRÁFICOS -->
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container-fluid p-4">
+                      <div class="row p-5 border rounded-3">
+                        <div class="col-md-5">
+                          <!-- GRAFICOS -->  
+                          <div class="chart-index">
+                            <canvas id="myChart"></canvas>
+                          </div>
+                        </div>
+                        <div class="col-md-7 resumen-index my-auto">
+                          <h3 class="col">Resumen General</h3>
+                          <hr>
+                          <h6>Representante con mayor cantidad de visitas</h6>
+                          <p>Mi Usuario</p> <!-- [USUARIO CON MAYOR CANTIDA DE VISITAS] -->
+                          <h6>Total de visitas mes</h6>
+                          <p>1234</p> <!-- [TOTAL VISITAS MES] -->
+                          <button type="button" class="btn btn-sinospace"><i class="bi bi-bar-chart" data-bs-toggle="tooltip" data-bs-title="Reportes" data-bs-placement="right" data-bs-offset="0,20"></i>Ver Reportes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SECCIÓN RESUMEN ACTUALIZACIONES -->
+
+                <div class="row title-sinoimplant">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container px-4 pb-3">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h2>Reporte de actualizaciones</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row card-actualizacion">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container-fluid px-4 pb-3">
+                      <div class="row p-3 border rounded-3">
+                        <div class="col-md-6">
+                          <h6>% de Tasa de fecundidad en Colombia</h6>
+                          <p><span>DANE - Estadísticas Vitales</span></p> <!-- [DATO DE FUENTE] -->
+                          <p class="ult-actualizacion"><span>Última actualización realizada: 26/03/2024</span></p> <!-- [DATO ULTIMA ACTUALIZACION] -->
+                        </div>
+                        <div class="col-md-2">
+                          <h6>Responsable</h6>
+                          <p><span>Proveedor</span></p> <!-- [DATO RESPONSABLE] -->
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Periodicidad de Actualización</h6>
+                          <p><span>Anual</span></p> <!-- [DATO PERIOCIDAD] -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div>
+                      <a href="#" data-bs-toggle="tooltip" data-bs-title="Actualizado" data-bs-placement="right" data-bs-custom-class="tooltip-actualizado"><span class="bubble-notification bubble-success2"><i class="bi bi-check"></i></span></a><!-- [DATO ESTADO] -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row card-actualizacion">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container-fluid px-4 pb-3">
+                      <div class="row p-3 border rounded-3">
+                        <div class="col-md-6">
+                          <h6>Embarazos no intencionales</h6>
+                          <p><span>Estado de población mundial 2022</span></p> <!-- [DATO DE FUENTE] -->
+                          <p class="ult-actualizacion"><span>Última actualización realizada: 26/03/2024</span></p> <!-- [DATO ULTIMA ACTUALIZACION] -->
+                        </div>
+                        <div class="col-md-2">
+                          <h6>Responsable</h6>
+                          <p><span>Proveedor</span></p> <!-- [DATO RESPONSABLE] -->
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Periodicidad de Actualización</h6>
+                          <p><span>Anual</span></p> <!-- [DATO PERIOCIDAD] -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div>
+                      <a href="#" data-bs-toggle="tooltip" data-bs-title="Próximo a actualizar" data-bs-placement="right" data-bs-custom-class="tooltip-desactualizado"><span class="bubble-notification bubble-alert2"><i class="bi bi-arrow-repeat"></i></span></a><!-- [DATO ESTADO] -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row card-actualizacion">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container-fluid px-4 pb-3">
+                      <div class="row p-3 border rounded-3">
+                        <div class="col-md-6">
+                          <h6>Mortalidad Materna</h6>
+                          <p><span>Boletín epidemiológico del Instituto nacional de salud</span></p> <!-- [DATO DE FUENTE] -->
+                          <p class="ult-actualizacion"><span>Última actualización realizada: 26/03/2024</span></p> <!-- [DATO ULTIMA ACTUALIZACION] -->
+                        </div>
+                        <div class="col-md-2">
+                          <h6>Responsable</h6>
+                          <p><span>Practicante Abbott</span></p> <!-- [DATO RESPONSABLE] -->
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Periodicidad de Actualización</h6>
+                          <p><span>Semanal</span></p> <!-- [DATO PERIOCIDAD] -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div>
+                      <a href="#" data-bs-toggle="tooltip" data-bs-title="Próximo a actualizar" data-bs-placement="right" data-bs-custom-class="tooltip-desactualizado"><span class="bubble-notification bubble-alert2"><i class="bi bi-arrow-repeat"></i></span></a><!-- [DATO ESTADO] -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row card-actualizacion">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container-fluid px-4 pb-3">
+                      <div class="row p-3 border rounded-3">
+                        <div class="col-md-6">
+                          <h6>Tarifario SOAT</h6>
+                          <p><span>Manual Tarifario SOAT</span></p> <!-- [DATO DE FUENTE] -->
+                          <p class="ult-actualizacion"><span>Última actualización realizada: 26/03/2024</span></p> <!-- [DATO ULTIMA ACTUALIZACION] -->
+                        </div>
+                        <div class="col-md-2">
+                          <h6>Responsable</h6>
+                          <p><span>Proveedor</span></p> <!-- [DATO RESPONSABLE] -->
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Periodicidad de Actualización</h6>
+                          <p><span>Anual</span></p> <!-- [DATO PERIOCIDAD] -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div>
+                      <a href="#" data-bs-toggle="tooltip" data-bs-title="Próximo a actualizar" data-bs-placement="right" data-bs-custom-class="tooltip-desactualizado"><span class="bubble-notification bubble-alert2"><i class="bi bi-arrow-repeat"></i></span></a><!-- [DATO ESTADO] -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row card-actualizacion">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container-fluid px-4 pb-3">
+                      <div class="row p-3 border rounded-3">
+                        <div class="col-md-6">
+                          <h6>Numero de Mujeres en edad Fertil (15-49 años)</h6>
+                          <p><span>DANE 2018 (Se entrega documento)</span></p> <!-- [DATO DE FUENTE] -->
+                          <p class="ult-actualizacion"><span>Última actualización realizada: 26/03/2024</span></p> <!-- [DATO ULTIMA ACTUALIZACION] -->
+                        </div>
+                        <div class="col-md-2">
+                          <h6>Responsable</h6>
+                          <p><span>Proveedor</span></p> <!-- [DATO RESPONSABLE] -->
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Periodicidad de Actualización</h6>
+                          <p><span>Anual</span></p> <!-- [DATO PERIOCIDAD] -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div>
+                      <a href="#" data-bs-toggle="tooltip" data-bs-title="Próximo a actualizar" data-bs-placement="right" data-bs-custom-class="tooltip-desactualizado"><span class="bubble-notification bubble-alert2"><i class="bi bi-arrow-repeat"></i></span></a><!-- [DATO ESTADO] -->
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="row card-actualizacion">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container-fluid px-4 pb-3">
+                      <div class="row p-3 border rounded-3">
+                        <div class="col-md-6">
+                          <h6>Costo de los implantes</h6>
+                          <p><span>Esta información debe ser actualizada por el personal comercial de abbott</span></p> <!-- [DATO DE FUENTE] -->
+                          <p class="ult-actualizacion"><span>Última actualización realizada: 26/03/2024</span></p> <!-- [DATO ULTIMA ACTUALIZACION] -->
+                        </div>
+                        <div class="col-md-2">
+                          <h6>Responsable</h6>
+                          <p><span>Representante de Uso Abbott</span></p> <!-- [DATO RESPONSABLE] -->
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Periodicidad de Actualización</h6>
+                          <p><span>Al uso de calculadora</span></p> <!-- [DATO PERIOCIDAD] -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div>
+                      <a href="#" data-bs-toggle="tooltip" data-bs-title="Próximo a actualizar" data-bs-placement="right" data-bs-custom-class="tooltip-desactualizado"><span class="bubble-notification bubble-alert2"><i class="bi bi-arrow-repeat"></i></span></a><!-- [DATO ESTADO] -->
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- ACCESO CALCULADORA -->
+                <div class="row access-calculadora">  
+                  <div class="col-md-10 offset-md-1">
+                    <div class="container pb-3">
+                      <div class="row p-3 card-calculadora border rounded-3">
+                        <div class="d-flex justify-content-between justify-content-center p-5 text-center">
+                          <div class="d-flex justify-content-center">
+                            <img src="img/icono-calculadora-white.svg" alt="Icono Calculadora" class="icono-calculadora col-1" />
+                            <h1>Calculadora Farmacoeconómica</h1>
+                          </div>
+                          <a class="d-inline-flex align-items-center btn btn-lg px-4 rounded-pill btn-calculadora" type="button">
+                            <i class="bi bi-caret-right-fill"></i>
+                          </a>
+                        </div>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+
+                <footer class="d-flex flex-wrap justify-content-center py-3 mt-4 border-top">
+                  <p class="col-md-6 text-body-secondary">© 2024 Sinoimplant - Todos los Derechos Reservados.</p>
+                  <p class="col-md-6 text-body-secondary text-end">Powered By.  Johan Ávila - Fabián González</p>
+                </footer>
+      
+              </div>
+
+              
+
+            </main>
+          
+          </div>
+        
+        </div>
+
+  </div>
+  
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="  crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
+  
+  <script src="js/dashboard.js"></script>
+  <script src="js/sidebar.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

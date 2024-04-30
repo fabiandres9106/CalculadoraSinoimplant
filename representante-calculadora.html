@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora Farmacoeconómica</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculadora.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sticky-top bg-nav-sinoimplant flex-md-nowrap p-0">
+    <div class="container-fluid p-0 py-3">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start text-white">
+        <a id="menu-toggle" href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+          <button class="nav-link text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list" id="main-icon"></i>
+          </button>
+        </a>
+        <a class="navbar-brand col-12 col-lg-auto me-lg-auto mb-2 mb-md-0 fs-6" href="#">
+          <span class="logo-sinoimplant">Sinoimplant</span>
+        </a>
+        <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <a>Mi Usuario</a>
+        </div>
+        <div class="dropdown text-end pe-4">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="circle-user">MU</span> <!-- [INICIALES NOMBRE USUARIO] -->
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+          </ul>
+        </div>
+      </div>      
+    </div>
+  </header>
+  
+  <!-- CONTENT -->
+  <div id="wrapper">
+  
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav" id="sidebar">   
+        <li><a href="#"><i class="bi bi-house-door-fill" data-bs-toggle="tooltip" data-bs-title="Inicio" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text" >Inicio</span></a></li>
+        <li><a href="#" class="active"><i class="bi bi-calculator-fill" data-bs-toggle="tooltip" data-bs-title="Calculadora" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Calculadora</span></a></li>
+        <li><a href="#"><i class="bi bi-bar-chart" data-bs-toggle="tooltip" data-bs-title="Reportes" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Reportes</span></a></li>
+        <li><a href="#"><i class="bi bi-arrow-repeat" data-bs-toggle="tooltip" data-bs-title="Actualizaciones" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Actualizaciones</span></a></li>
+        <li><a href="#"><i class="bi bi-person-circle" data-bs-toggle="tooltip" data-bs-title="Perfil" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Perfil</span></a></li>
+        <li><a href="#"><i class="bi bi-power" data-bs-toggle="tooltip" data-bs-title="Cerrar Sesión" data-bs-placement="right" data-bs-offset="0,20"></i><span class="sidebar-text">Cerrar Sesión</span></a></li>
+      </ul>
+    </div>
+    
+    <div id="page-content-wrapper">
+
+      <!-- Keep all page content within the page-content inset div! -->
+      <div class="page-content inset">
+        <!-- MAIN -->
+        <main>
+
+          <!-- LOGOS ABBOTT -->
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 px-5 mb-3">
+            <img src="img/LogoABBOTTHorizon.svg" alt="Logo Aboot" class="logo-abbott"/>
+            <h5 class="h5 logo-women">Women's Health</h4>
+          </div>
+  
+          <div class="container-fluid px-5">
+
+            <!-- SLIDES CALCULADORA -->
+            <div class="calculadora rounded-3 p-5" id="calculadora">
+              
+              <div class="calculadora-title d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class="col-8">
+                  <img src="img/icono-calculadora.svg" alt="Icono Calculadora" class="icono-calculadora col-1" />
+                  <h2>Calculadora Farmacoeconómica</h2>
+                </div>
+                <div class="col-4 text-end">
+                  <h6 id="shEjecutivoEmpresa" class="visually-hidden">Dr. <span id="shEjecutivo"></span> - <span id="shEmpresa"></span></h6> <!-- [DATOS DEL DOCTOR Y LA EMPRESA] -->
+                </div >
+              </div>
+              
+              <div class="tab-content p-3" id="pills-tabContent">
+                
+                  <!-- PASO 1 -->
+                  <div class="tab-pane fade show active mx-auto" id="pills-Paso1" role="tabpanel" aria-labelledby="pills-Paso1-tab" tabindex="0">
+                    <div class="container text-center">
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <!-- REGISTRO DE VISITANTE -->
+                          <form>
+                            <div class="mb-3">
+                              <input type="text" class="form-control" id="nombreEjecutivo" aria-describedby="nombreHelp" placeholder="Ingrese nombre">
+                            </div>
+                            <div class="mb-3">
+                              <select class="form-select" id="selectTipoEntidad">
+                                <option selected>Seleccione tipo de institución</option>
+                                <option value="entidad">Entidad</option>
+                                <option value="municipio">Municipio</option>
+                              </select>
+                            </div>
+                            <div id="input-entidad" class="mb-3 inputSelectEntidad active">
+                              <input type="text" class="form-control" id="empresaCalculadora" aria-describedby="empresaHelp" placeholder="Ingrese Institución">
+                            </div>
+                            <div id="input-municipio" class="mb-3 inputSelectEntidad">
+                              <input type="text" class="form-control" id="empresaCalculadora" aria-describedby="empresaHelp" placeholder="Ingrese Municipio">
+                            </div>
+                            <button id="btnIngresar" class="btn btn-sinospace" data-bs-toggle="pill" data-bs-target="#pills-Paso2" type="button" role="tab" aria-controls="pills-Paso2" >Ingresar</button>
+                            
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- PAS0 2 -->
+                  <div class="tab-pane py-3 fade" id="pills-Paso2" role="tabpanel" aria-labelledby="pills-Paso2-tab" tabindex="0">
+                    <!-- INFORMATIVO PRODUCTOS -->
+                    <h5>Algunos datos para tener en cuenta...</h5>
+                    <div class="content-fluid cards-paso2 py-3">
+                      <div class="row">
+                        <div class="col-md-8">
+                          
+                          <div class="content-fluid text-center">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <div class="">                     
+                                  <div class="titles-paso2 pt-5 text-end">
+                                    <div>Forma</div>
+                                    <div>Costo / U</div>
+                                    <div>Costo aplicación</div>
+                                    <div>Costo Total</div>
+                                    <div>Años / Uso</div>
+                                    <div>Costo / Año</div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3">
+                                <div class="card card-sinoimplant">                     
+                                  <div class="card-body">
+                                    <h5 class="card-title logo-sinoimplant">Sinoimplant</h5>
+                                    <div>Imp Sub + Kit</div>
+                                    <div>$ <input id="incostUniSI" class="input-paso2 form-control" type="number" /></div>
+                                    <div>$ 10.000,00</div><input type="hidden" id="inAplicacionSI" value="10000">
+                                    <div><span id="costTotalSI">$ 0</span></div><input type="hidden" id="incostTotalSI">
+                                    <div>4</div><input type="hidden" id="induracionSI" value="4">
+                                    <div><span id="costAnualSI">$ 0</span></div><input type="hidden" id="incostAnualSI">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3">
+                                <div class="card card-paso2">                     
+                                  <div class="card-body">
+                                    <h5 class="card-title">Jadell</h5>
+                                    <div>Imp Sub</div>
+                                    <div>$ <input id="incostUniJad" class="input-paso2 form-control" type="number" /></div>
+                                    <div>$ 30.000,00</div><input type="hidden" id="inAplicacionJad" value="30000">
+                                    <div><span id="costTotalJad">$ 0</span></div><input type="hidden" id="incostTotalJad">
+                                    <div>5</div><input type="hidden" id="induracionJad" value="5">
+                                    <div><span id="costAnualJad">$ 0</span></div><input type="hidden" id="incostAnualJad">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3">
+                                <div class="card card-paso2">                     
+                                  <div class="card-body">
+                                    <h5 class="card-title">Implanon</h5>
+                                    <div>Imp Sub + Pistola</div>
+                                    <div>$ <input id="incostUniImp" class="input-paso2 form-control"  type="number" /></div>
+                                    <div>$ 30.000,00</div><input type="hidden" id="inAplicacionImp" value="30000">
+                                    <div><span id="costTotalImp">$ 0</span></div><input type="hidden" id="incostTotalImp">
+                                    <div>3</div><input type="hidden" id="induracionImp" value="3">
+                                    <div><span id="costAnualImp">$ 0</span></div><input type="hidden" id="incostAnualImp">
+                                  </div>
+                                </div>
+                              </div>
+                          
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-md-4">
+                          <div class="card card-chart-paso2">                     
+                            <div class="card-body">
+                              <canvas class="my-4" id="chartPaso2"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- PASO 3 -->
+                  <div class="tab-pane fade py-3" id="pills-Paso3" role="tabpanel" aria-labelledby="pills-Paso3-tab" tabindex="0">
+                    <div class="content-fluid">
+                    <h5>Algunos datos para tener en cuenta...</h5>
+                    
+                      <div class="row">
+                        <div class="col-md-8">
+                          <form>
+                            <table class="table table-calculadora">
+                              <tbody>
+                                <tr>
+                                  <td scope="row"><i class="bi bi-circle-fill item-1"></i></td>
+                                  <td>Mujeres de 15 a 49 años</td>
+                                  <td></td>
+                                  <td class="td-paso3 text-end"><input type="number" class="form-control" id="cantidadMujeres" aria-describedby="mujeresHelp" value="0"></td>
+                                </tr>
+                                <tr>
+                                  <td scope="row"><i class="bi bi-circle-fill item-2"></i></td>
+                                  <td>Tasa de fecundidad</td>
+                                  <td class="td-paso3 text-end"><input type="hidden" id="intasaFecundidad"><span id="tasaFecundidad">0</span> %</td><!-- [INPUT FECUNIDAD] -->
+                                  <td class="td-paso3 text-end" id="mujFertiles">0</td><input type="hidden" id="inmujFertiles"><!-- [DATO FECUNIDAD] -->
+                                </tr>
+                                <tr>
+                                  <td scope="row"><i class="bi bi-circle-fill item-3"></i></td>
+                                  <td>Embarazos no intencionales</td>
+                                  <td class="td-paso3 text-end"><input type="hidden" id="intasaembNoIntencionales"><span id="tasaembNoIntencionales">0</span> / 1.000</td><!-- [INPUT EMBARAZOS NO INTENCIONALES] -->
+                                  <td class="td-paso3 text-end" id="embNoIntencionales">0</td><input type="hidden" id="inembNoIntencionales"><!-- [DATO EMBARAZOS NO INTENCIONALES] -->
+                                </tr>
+                                <tr>
+                                  <td scope="row"><i class="bi bi-circle-fill item-4"></i></td>
+                                  <td>Mortalidad Materna</td>
+                                  <td class="td-paso3 text-end"><input type="hidden" id="intasamortMaterna"><span id="tasamortMaterna">0.0</span> / 100.000</td><!-- [INPUT MOTALIDAD MATERNA] -->
+                                  <td class="td-paso3 text-end" id="mortMaterna">0</td><input type="hidden" id="inmortMaterna"><!-- [DATO MORTALIDAD MATERNA] -->
+                                </tr>
+                                <tr>
+                                  <td scope="row"><i class="bi bi-circle-fill item-5"></i></td>
+                                  <td>Mortalidad Materna no deseados</td>
+                                  <td class="td-paso3 text-end"><input type="hidden" id="intasamortMatNoDeseados"><span id="tasamortMatNoDeseados">0.0</span> / 100.000</td><!-- [INPUT MOTALIDAD MATERNA NO DESEADOS] -->
+                                  <td class="td-paso3 text-end" id="mortMatNoDeseados">0</td><input type="hidden" id="inmortMatNoDeseados"><!-- [DATO MORTALIDAD MATERNA NO DESEADOS] -->
+                                </tr>
+                              </tbody>
+                            </table>
+                          </form>
+                          <!-- INFO -->
+                          <div class="content notification">
+                            <div class="row">
+                              <div class="col-md-3">
+                              </div>
+                              <div class="d-flex flex-wrap flex-md-nowrap align-items-top">
+                                <div>
+                                  <span class="bubble-notification bubble-info"><i class="bi bi-info-circle"></i></span>
+                                </div>
+                                <div class="alert alert-info" role="alert">
+                                  Estos datos son obtenidos a través de la fuente de información indicada por el proveedor.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mx-auto">
+                          <div class="card card-graph-paso3">
+                            <div class="card-body">
+                              <canvas class="my-4" id="chartPaso3"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- PASO 4 -->
+                  <div class="tab-pane fade py-3" id="pills-Paso4" role="tabpanel" aria-labelledby="pills-Paso4-tab" tabindex="0">
+                    <div class="content-fluid">
+                      <h5>Algunos datos para tener en cuenta...</h5>
+                      
+                        <div class="row">
+                          <div class="col-md-10 offset-md-1">
+                            <div class="table-paso4">
+                              <div class="content-fluid">
+                                <div class="row">
+                                  <div class="col">
+                                    <strong>Categoria</strong>
+                                    <select class="form-select select-paso4" id="hospLevel">
+                                      <option value="1">1er Nivel</option>
+                                      <option value="2">2do Nivel</option>
+                                      <option selected value="3">3er Nivel</option>
+                                    </select>
+                                  </div>
+                                  <div class="col">
+                                    <strong>Riesgo</strong>
+                                    <select class="form-select select-paso4" id="riskPr">
+                                      <option selected value="1">Bajo</option>
+                                      <option value="2">Medio</option>
+                                      <option value="3">Alto</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="table-paso4">
+                              <table class="table table-calculadora">
+                                <thead>
+                                  <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th class="text-end" scope="col">Valor Unitario</th>
+                                    <th class="text-end" scope="col">Cantidad</th>
+                                    <th class="text-end" scope="col">Totales</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td scope="row"><i class="bi bi-circle-fill item-1"></i></td>
+                                    <td>Día / Hospitalización</td>
+                                    <td class="text-end">$ <span id="valUDH">0</span>.00</td><input type="hidden" id="inValUDH"><!-- [VALOR UNITARIO] -->
+                                    <td class="text-end"><input value="1" disabled type="text" class="form-control" id="cantidadDiasHosp" aria-describedby="cantidadDiasHosp"></td><!-- [INPUT DIAS HOSP] -->
+                                    <td class="text-end">$ <span id="totDH">0</span>.00</td><input type="hidden" id="intotDH"><!-- [VALOR TOTAL] -->
+                                  </tr>
+                                  <tr>
+                                    <td scope="row"><i class="bi bi-circle-fill item-2"></i></td>
+                                    <td>Día / Cuidado Intensivo</td>
+                                    <td class="text-end">$ <span id="valUUCI">0</span>.00</td><input type="hidden" id="inValUUCI"><!-- [VALOR UNITARIO] -->
+                                    <td class="text-end"><input value="0" disabled type="text" class="form-control" id="cantidadUCI" aria-describedby="cantidadDiasHosp"></td><!-- [INPUT DIAS INTENSIVO] -->
+                                    <td class="text-end">$ <span id="totUCI">0</span>.00</td><input type="hidden" id="intotUCI"><!-- [VALOR TOTAL] -->
+                                  </tr>
+                                  <tr>
+                                    <td scope="row"><i class="bi bi-circle-fill item-3"></i></td>
+                                    <td>Parto</td>
+                                    <td class="text-end">$ <span id="valUPar">0</span>.00</td><input type="hidden" id="inValUPar"><!-- [VALOR UNITARIO] -->
+                                    <td class="text-end"><input value="1" disabled type="text" class="form-control" id="cantidadParto" aria-describedby="cantidadDiasHosp"></td><!-- [INPUT PARTO] -->
+                                    <td class="text-end">$ <span id="totPar">0</span>.00</td><input type="hidden" id="intotPar"><!-- [VALOR TOTAL] -->
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                              
+                            <!-- INFO -->
+                            <div class="content notification">
+                              <div class="row">
+                                <div class="col-md-3">
+                                </div>
+                                <div class="d-flex flex-wrap flex-md-nowrap align-items-top">
+                                  <div>
+                                    <span class="bubble-notification bubble-info"><i class="bi bi-info-circle"></i></span>
+                                  </div>
+                                  <div class="alert alert-info" role="alert">
+                                    Estos datos son obtenidos a través de la fuente de información indicada por el proveedor.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- PASO 5 -->
+                  <div class="tab-pane fade py-3" id="pills-Paso5" role="tabpanel" aria-labelledby="pills-Paso5-tab" tabindex="0">
+                    <div class="content-fluid">
+                      <div class="row">
+                        <div class="col-md-8">
+                          
+                          <!-- INFORMATIVO SINOIMPLANT -->
+                          <div class="info-paso5 info-sinoimplant">
+                            <div class="content-fluid">
+                              <div class="row">
+                                <div class="col-md-3 d-flex align-items-center">
+                                  <span class="logo-sinoimplant">Sinoimplant</span>
+                                </div>
+                                <div class="col-md-7">
+                                  <p>Costo embarazos no deseados</p> 
+                                  <p>Costo mortalidad materna no deseados</p>
+                                  <p>Costo de prevenir los no deseados</p>
+                                  <p><strong>Ahorro</strong></p>
+                                </div>
+                                <div class="col-md-2 text-end">
+                                  <p>$ <span id="costEmbNoDesSI">0</span><input type="hidden" id="incostEmbNoDesSI"></p>
+                                  <p>$ <span id="costMortMatNoDesSI">0</span><input type="hidden" id="incostMortMatNoDesSI"></p>
+                                  <p>$ <span id="costPrevSI">0</span><input type="hidden" id="incostPrevSI"></p>
+                                  <p><strong>$ <span id="ahorroSI">0</span><input type="hidden" id="inahorroSI"></strong></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- INFORMATIVO JADELL -->
+                          <div class="info-paso5">
+                            <div class="content-fluid">
+                              <div class="row">
+                                <div class="col-md-3 d-flex align-items-center">
+                                  <h6>Jadell</h6>
+                                </div>
+                                <div class="col-md-7">
+                                  <p>Costo embarazos no deseados</p> 
+                                  <p>Costo mortalidad materna no deseados</p>
+                                  <p>Costo de prevenir los no deseados</p>
+                                  <p><strong>Ahorro</strong></p>
+                                </div>
+                                <div class="col-md-2 text-end">
+                                  <p>$ <span id="costEmbNoDesJad">0</span><input type="hidden" id="incostEmbNoDesJad"></p>
+                                  <p>$ <span id="costMortMatNoDesJad">0</span><input type="hidden" id="incostMortMatNoDesJad"></p>
+                                  <p>$ <span id="costPrevJad">0</span><input type="hidden" id="incostPrevJad"></p>
+                                  <p><strong>$ <span id="ahorroJad">0</span><input type="hidden" id="inahorroJad"></strong></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- INFORMATIVO IMPLANON -->
+                          <div class="info-paso5">
+                            <div class="content-fluid">
+                              <div class="row">
+                                <div class="col-md-3 d-flex align-items-center"">
+                                  <h6>Implanon</h6>
+                                </div>
+                                <div class="col-md-7">
+                                  <p>Costo embarazos no deseados</p> 
+                                  <p>Costo mortalidad materna no deseados</p>
+                                  <p>Costo de prevenir los no deseados</p>
+                                  <p><strong>Ahorro</strong></p>
+                                </div>
+                                <div class="col-md-2 text-end">
+                                  <p>$ <span id="costEmbNoDesImp">0</span><input type="hidden" id="incostEmbNoDesImp"></p>
+                                  <p>$ <span id="costMortMatNoDesImp">0</span><input type="hidden" id="incostMortMatNoDesImp"></p>
+                                  <p>$ <span id="costPrevImp">0</span><input type="hidden" id="incostPrevImp"></p>
+                                  <p><strong>$ <span id="ahorroImp">0</span><input type="hidden" id="inahorroImp"></strong></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-md-4">
+                          <div class="paso5-graph p-3 mb-3">
+                            <h5><span class="logo-sinoimplant">Sinoimplant</span> vs Jadell</h5>
+                            <div class="paso5-chart">
+                              <canvas id="chartPaso5_1"></canvas>
+                            </div>
+                            <h5>-$ <span id="SIvsJad">0</span><input type="hidden" id="inSIvsJad"></h4><!-- [DATO AHORRO 1] -->
+                          </div>
+                          <div class="paso5-graph p-3 mb-3">
+                            <h5><span class="logo-sinoimplant">Sinoimplant</span> vs Implanon</h5>
+                            <div class="paso5-chart">
+                              <canvas id="chartPaso5_2"></canvas>
+                            </div>
+                            <h5>-$ <span id="SIvsImp">0</span><input type="hidden" id="inSIvsImp"></h5><!-- [DATO AHORRO 2] -->
+                          </div>
+                          <div>
+                            <button type="button" class="btn btn-sinospace"><i class="bi bi-arrow-down-circle-fill"></i> Descargar cotización (PDF)</button><!-- [DESCARGAR PDF] -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start visually-hidden" id="calculadora-navegacion">
+                <div class="col-2">
+                  <a class="nav-link calculadora-nav" id="pills-before" data-bs-toggle="pill" data-bs-target="" type="button" role="tab" aria-controls="" aria-selected="false"><i class="bi bi-caret-left-fill"></i></a>
+                </div>
+                <div class="col-8">
+                  <nav>
+                    <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link calculadora-nav active" id="pills-Paso1-tab" data-bs-toggle="pill" data-bs-target="#pills-Paso1" type="button" role="tab" aria-controls="pills-Paso1" aria-selected="true">1</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link calculadora-nav" id="pills-Paso2-tab" data-bs-toggle="pill" data-bs-target="#pills-Paso2" type="button" role="tab" aria-controls="pills-Paso2" aria-selected="false">2</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link calculadora-nav" id="pills-Paso3-tab" data-bs-toggle="pill" data-bs-target="#pills-Paso3" type="button" role="tab" aria-controls="pills-Paso3" aria-selected="false">3</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link calculadora-nav" id="pills-Paso4-tab" data-bs-toggle="pill" data-bs-target="#pills-Paso4" type="button" role="tab" aria-controls="pills-Paso4" aria-selected="false">4</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link calculadora-nav" id="pills-Paso5-tab" data-bs-toggle="pill" data-bs-target="#pills-Paso5" type="button" role="tab" aria-controls="pills-Paso5" aria-selected="false">5</button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="col-2 text-end">
+                  <a class="nav-link calculadora-nav" id="pills-after" data-bs-toggle="pill" data-bs-target="" type="button" role="tab" aria-controls="" aria-selected="false"><i class="bi bi-caret-right-fill"></i></a>
+                </div >
+              </div>
+            </div>
+
+            <footer class="d-flex flex-wrap justify-content-center py-3 mt-4 border-top">
+              <p class="col-md-6 text-body-secondary">© 2024 Sinoimplant - Todos los Derechos Reservados.</p>
+              <p class="col-md-6 text-body-secondary text-end">Powered By.  Johan Ávila - Fabián González</p>
+            </footer>
+        </main>
+        
+        
+      </div>
+    </div>
+  
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="  crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
+
+  <script src="js/sidebar.js"></script>
+  <script src="js/calculadora-script.js"></script>
+  <script src="js/qBasicData.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

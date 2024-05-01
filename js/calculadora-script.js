@@ -1,4 +1,3 @@
-
 // SLIDE 1
 
 $(document).ready(function(){
@@ -141,8 +140,23 @@ new Chart(chartPaso3, {
     }
   });
 
-// Consulta BD
 
+// Solicitud HTTP de Municipios
+fetch('https://eduniversal.com.co/sinoimplant/bbdd/qMunicipiosData.php')
+  .then(response => response.json())
+  .then(data => {
+    //Procesar la data recibida en JSON y alimentar el SELECT munSel
+    const municipiosSelect = document.getElementById('munSel');
+    for (const municipio in data) {
+      const option = document.createElement('option');
+      option.value = data[municipio];
+      option.textContent = municipio;
+      municipiosSelect.appendChild(option);
+    }
+  })
+  .catch(error => {
+    console.error('Error al obtener el JSON: ', error);
+  })
 
 // Chart Paso 5
 

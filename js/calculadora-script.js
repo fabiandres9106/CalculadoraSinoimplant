@@ -55,55 +55,7 @@ inputEmpresaCalculadora.addEventListener('keyup', function(){
 })
 
 
-// CHARTS
-
-// Chart Paso 2
-/*
-const chartPaso2 = document.getElementById('chartPaso2');
-const dataPaso2 = {
-  labels: ['Sinoimplant', 'Jadell', 'Implanon'],
-  datasets: [{
-    label: 'Costo Unitario',
-    data: [0, 0, 0],
-    backgroundColor:[
-      'rgba(170, 0, 97, 1)',
-      'rgba(179, 179, 179, .5)',
-      'rgba(179, 179, 179, .5)'
-    ],
-    borderWidth: 1
-  }] 
-}
-
-var chartPaso2Act = new Chart(chartPaso2, {
-    type: 'bar',
-    data: dataPaso2,
-    options: {
-      indexAxis: 'y',
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      },
-      scales: {
-        x: {
-          stacked: true,
-        },
-        y: {
-          stacked: true
-        }
-      },
-      plugins: {
-        legend: {
-          labels:{
-            boxWidth: 10,
-          }
-        }
-      },
-    },
-    
-  });
-
-  */
+// Slide 3
 
 // Chart Paso 3
 

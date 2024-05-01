@@ -141,6 +141,9 @@ new Chart(chartPaso3, {
     }
   });
 
+// Consulta BD
+
+
 // Chart Paso 5
 
 const chartPaso5_1 = document.getElementById('chartPaso5_1');

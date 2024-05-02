@@ -57,41 +57,6 @@ inputEmpresaCalculadora.addEventListener('keyup', function(){
 
 // Slide 3
 
-// Chart Paso 3
-
-const chartPaso3 = document.getElementById('chartPaso3');
-const dataPaso3 = {
-  labels: [
-    'Embarazos no intencionales',
-    'Mortalidad Materna',
-    'Mortalidad Materna no deseados'
-  ],
-  datasets: [{
-    label: 'My First Dataset',
-    data: [300, 50, 100],
-    backgroundColor: [
-      'rgb(45, 139, 186)',
-      'rgb(65, 184, 213)',
-      'rgb(87, 211, 255)'
-    ],
-    hoverOffset: 4
-  }]
-}
-
-new Chart(chartPaso3, {
-    type: 'pie',
-    data: dataPaso3,
-    options:{
-      plugins: {
-        legend: {
-          labels:{
-            boxWidth: 10,
-          }
-        }
-      },
-    }
-  });
-
 // Habilitar o desabilitar select municipios según selección
 const selEntidadMunicipio = document.getElementById('selEntidadMunicipio');
 const municipiosSelect = document.getElementById('munSel');
@@ -128,7 +93,42 @@ fetch('https://eduniversal.com.co/sinoimplant/bbdd/qMunicipiosData.php')
     console.error('Error al obtener el JSON: ', error);
   })
 
+// Chart Paso 3
 
+const chartPaso3 = document.getElementById('chartPaso3');
+const dataTasaFecunidad = document.getElementById('inmujFertiles');
+
+const dataPaso3 = {
+  labels: [
+    'Embarazos no intencionales',
+    'Mortalidad Materna',
+    'Mortalidad Materna no deseados'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [dataTasaFecunidad, 50, 100],
+    backgroundColor: [
+      'rgb(45, 139, 186)',
+      'rgb(65, 184, 213)',
+      'rgb(87, 211, 255)'
+    ],
+    hoverOffset: 4
+  }]
+}
+
+new Chart(chartPaso3, {
+    type: 'bar',
+    data: dataPaso3,
+    options:{
+      plugins: {
+        legend: {
+          labels:{
+            boxWidth: 10,
+          }
+        }
+      },
+    }
+  });
 
 
 // Chart Paso 5
@@ -230,15 +230,3 @@ new Chart(chartPaso5_2, {
   },
 });
 
-/*
-$(document).ready(function(){
-  $('#incostUniSI, #incostUniJad, #incostUniImp').on('input', function() {
-    var val1 = parseFloat($('#incostUniSI').val()) || 0;
-    var val2 = parseFloat($('#incostUniJad').val()) || 0;
-    var val3 = parseFloat($('#incostUniImp').val()) || 0;
-    
-    chartPaso2Act.data.datasets[0].data = [val1, val2, val3];
-    chartPaso2Act.update();
-  });
-})
-*/

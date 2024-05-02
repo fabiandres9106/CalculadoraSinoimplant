@@ -156,15 +156,15 @@ function procesarEventoLoadBasicData(){
         tasaembNoIntencionales.innerHTML=datos.tasaEmbarazosNoIntencionales;
         tasamortMaterna.innerHTML=datos.tasaMortalidadMaterna;
         tasamortMatNoDeseados.innerHTML=datos.tasaMortalidadMaternaNoDeseados;
-        valUDH.innerHTML=datos.hosp1;
-        valUUCI.innerHTML=datos.uci;
-        valUPar.innerHTML=datos.parto;
+        valUDH.innerHTML=parseInt(datos.hosp1).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
+        valUUCI.innerHTML=parseInt(datos.uci).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
+        valUPar.innerHTML=parseInt(datos.parto).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
         inValUDH.value=datos.hosp1;
         inValUUCI.value=datos.uci;
         inValUPar.value=datos.parto;
-        totDH.innerHTML=datos.hosp1*1;
-        totUCI.innerHTML=datos.uci*0;
-        totPar.innerHTML=datos.parto*1;
+        totDH.innerHTML=parseInt(datos.hosp1*1).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
+        totUCI.innerHTML=parseInt(datos.uci*0).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
+        totPar.innerHTML=parseInt(datos.parto*1).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
         intotDH.value=datos.hosp1*1;
         intotUCI.value=datos.uci*0;
         intotPar.value=datos.parto*1;
@@ -190,15 +190,18 @@ function calcular(){
 function actualizarGastos(){
     switch(hospLevel.value){
         case "1":
-            valUDH.innerHTML=datos.hosp1.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'});
+            var datosHosp1 = parseInt(datos.hosp1)
+            valUDH.innerHTML = datosHosp1.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
             inValUDH.value=datos.hosp1;
         break;
         case "2":
-            valUDH.innerHTML=datos.hosp2.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'});
+            var datosHosp2 = parseInt(datos.hosp2);
+            valUDH.innerHTML=datosHosp2.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
             inValUDH.value=datos.hosp2;
         break;
         case "3":
-            valUDH.innerHTML=datos.hosp3.toLocaleString('es-CO', { maximumFractionDigits: 2, style: 'currency', currency: 'COP'});
+            var datosHosp3 = parseInt(datos.hosp3);
+            valUDH.innerHTML=datosHosp3.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
             inValUDH.value=datos.hosp3;
         break;
     }
@@ -216,9 +219,9 @@ function actualizarGastos(){
             cantidadUCI.value=3;
         break;
     }
-    totDH.innerHTML=inValUDH.value*cantidadDiasHosp.value;
+    totDH.innerHTML=parseInt(inValUDH.value*cantidadDiasHosp.value).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     intotDH.value=inValUDH.value*cantidadDiasHosp.value;
-    totUCI.innerHTML=inValUUCI.value*cantidadUCI.value;
+    totUCI.innerHTML=parseInt(inValUUCI.value*cantidadUCI.value).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     intotUCI.value=inValUUCI.value*cantidadUCI.value;
 
     costEmbNoDesSI.innerHTML=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));

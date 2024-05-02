@@ -92,13 +92,31 @@ new Chart(chartPaso3, {
     }
   });
 
+// Habilitar o desabilitar select municipios según selección
+const selEntidadMunicipio = document.getElementById('selEntidadMunicipio');
+const municipiosSelect = document.getElementById('munSel');
+const cantdMujeres = document.getElementById('cantidadMujeres');
+
+selEntidadMunicipio.addEventListener('change', function(){
+  if (selEntidadMunicipio.value === "entidad"){
+    municipiosSelect.disabled = false;
+  }else{
+    municipiosSelect.disabled = true;
+  }
+})
+
+// Cambiar valor input cantidadMujeres según selección munSel
+
+municipiosSelect.addEventListener('change', function(){
+  cantdMujeres.value = municipiosSelect.value;
+  calcular();
+})
 
 // Solicitud HTTP de Municipios
 fetch('https://eduniversal.com.co/sinoimplant/bbdd/qMunicipiosData.php')
   .then(response => response.json())
   .then(data => {
     //Procesar la data recibida en JSON y alimentar el SELECT munSel
-    const municipiosSelect = document.getElementById('munSel');
     for (const municipio in data) {
       const option = document.createElement('option');
       option.value = data[municipio];
@@ -109,6 +127,9 @@ fetch('https://eduniversal.com.co/sinoimplant/bbdd/qMunicipiosData.php')
   .catch(error => {
     console.error('Error al obtener el JSON: ', error);
   })
+
+
+
 
 // Chart Paso 5
 

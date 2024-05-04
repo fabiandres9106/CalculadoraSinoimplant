@@ -267,32 +267,32 @@
                               <table class="table table-calculadora">
                                 <tbody>
                                   <tr>
-                                    <td scope="row"><i class="bi bi-circle-fill item-1"></i></td>
+                                    <td scope="row"><i class="bi bi-circle-fill item-3"></i></td>
                                     <td>Mujeres de 15 a 49 años</td>
                                     <td></td>
                                     <td class="td-paso3 text-end"><input type="number" class="form-control" id="cantidadMujeres" aria-describedby="mujeresHelp" value="0"></td>
                                   </tr>
                                   <tr>
-                                    <td scope="row"><i class="bi bi-circle-fill item-2"></i></td>
+                                    <td scope="row"><i class="bi bi-circle-fill item-6"></i></td>
                                     <td>Tasa de fecundidad</td>
                                     <td class="td-paso3 text-end"><input type="hidden" id="intasaFecundidad"><span id="tasaFecundidad">0</span> %</td><!-- [INPUT FECUNIDAD] -->
                                     <td class="td-paso3 text-end" id="mujFertiles">0</td><input type="hidden" id="inmujFertiles"><!-- [DATO FECUNIDAD] -->
                                   </tr>
                                   <tr>
-                                    <td scope="row"><i class="bi bi-circle-fill item-3"></i></td>
-                                    <td>Embarazos no intencionales</td>
+                                    <td scope="row"><i class="bi bi-circle-fill item-7"></i></td>
+                                    <td>Embarazos no intencionales<sup>1</sup></td>
                                     <td class="td-paso3 text-end"><input type="hidden" id="intasaembNoIntencionales"><span id="tasaembNoIntencionales">0</span> / 1.000</td><!-- [INPUT EMBARAZOS NO INTENCIONALES] -->
                                     <td class="td-paso3 text-end" id="embNoIntencionales">0</td><input type="hidden" id="inembNoIntencionales"><!-- [DATO EMBARAZOS NO INTENCIONALES] -->
                                   </tr>
                                   <tr>
-                                    <td scope="row"><i class="bi bi-circle-fill item-4"></i></td>
-                                    <td>Mortalidad Materna</td>
+                                    <td scope="row"><i class="bi bi-circle-fill item-8"></i></td>
+                                    <td>Mortalidad Materna<sup>2</sup></td>
                                     <td class="td-paso3 text-end"><input type="hidden" id="intasamortMaterna"><span id="tasamortMaterna">0.0</span> / 100.000</td><!-- [INPUT MOTALIDAD MATERNA] -->
                                     <td class="td-paso3 text-end" id="mortMaterna">0</td><input type="hidden" id="inmortMaterna"><!-- [DATO MORTALIDAD MATERNA] -->
                                   </tr>
                                   <tr>
-                                    <td scope="row"><i class="bi bi-circle-fill item-5"></i></td>
-                                    <td>Mortalidad Materna no deseados</td>
+                                    <td scope="row"><i class="bi bi-circle-fill item-9"></i></td>
+                                    <td>Mortalidad Materna no deseados<sup>2</sup></td>
                                     <td class="td-paso3 text-end"><input type="hidden" id="intasamortMatNoDeseados"><span id="tasamortMatNoDeseados">0.0</span> / 100.000</td><!-- [INPUT MOTALIDAD MATERNA NO DESEADOS] -->
                                     <td class="td-paso3 text-end" id="mortMatNoDeseados">0</td><input type="hidden" id="inmortMatNoDeseados"><!-- [DATO MORTALIDAD MATERNA NO DESEADOS] -->
                                   </tr>
@@ -306,20 +306,26 @@
                               <div class="col-md-3">
                               </div>
                               <div class="d-flex flex-wrap flex-md-nowrap align-items-top">
+                                <!--
                                 <div>
                                   <span class="bubble-notification bubble-info"><i class="bi bi-info-circle"></i></span>
                                 </div>
+                                -->
                                 <div class="alert alert-info" role="alert">
-                                  Estos datos son obtenidos a través de la fuente de información indicada por el proveedor.
+                                  <p><strong>Fuente:</strong></p>
+                                  <p><strong>1.</strong> Embarazos no intencionales por cada 1000 mujeres de 15 a 49 años. (estado de la población mundial 2022 UNFPA) LINK: <a href="https://colombia.unfpa.org/es/publications/informe-la-poblacion-mundial-2022-visibilizar-lo-invisible" target="_blank"
+                                  >https://colombia.unfpa.org/es/publications/informe-la-poblacion-mundial-2022-visibilizar-lo-invisible</a></p> 
+                                  <p><strong>2.</strong> Razón de mortalidad materna de acuerdo con boletín epidemiológico semanal del instituto nacional de salud (INS). <a href="http://www.ins.gov.co/buscador-eventos/Paginas/Vista-Boletin-Epidemilogico.aspx" target="_blank">https://www.ins.gov.co/buscador-eventos/Paginas/Vista-Boletin-Epidemilogico.aspx</a></p>
+
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4 mx-auto">
+                        <div class="col-md-4 mx-auto mt-4">
                           <div class="card card-graph-paso3">
                             <div class="card-body">
-                              <canvas class="my-4" id="chartPaso3"></canvas>
+                              <canvas class="my-4" id="chartPaso3" height="500"></canvas>
                             </div>
                           </div>
                         </div>

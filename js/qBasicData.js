@@ -186,6 +186,15 @@ function calcular(){
     intasamortMatNoDeseados.value=datos.tasaMortalidadMaternaNoDeseados;
     inmortMatNoDeseados.value=Math.round(inembNoIntencionales.value*datos.tasaMortalidadMaternaNoDeseados/100000);
     mortMatNoDeseados.innerHTML=Math.round(inembNoIntencionales.value*datos.tasaMortalidadMaternaNoDeseados/100000);
+
+    // ACTUALIZAR GRÁFICO PASO 3 - ESTADÍSTICAS MUJERES
+    var val1 = parseFloat(inmujFertiles.value) || 0;
+    var val2 = parseFloat(inembNoIntencionales.value) || 0;
+    var val3 = parseFloat(inmortMaterna.value) || 0;
+    var val4 = parseFloat(inmortMatNoDeseados.value) || 0;
+    
+    chartPaso3Act.data.datasets[0].data = [val1, val2, val3, val4];
+    chartPaso3Act.update();
 }
 function actualizarGastos(){
     switch(hospLevel.value){

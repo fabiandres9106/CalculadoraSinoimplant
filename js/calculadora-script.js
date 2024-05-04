@@ -106,7 +106,7 @@ const dataPaso3 = {
     'Mortalidad Materna no deseados'
   ],
   datasets: [{
-    label: 'My First Dataset',
+    label: 'Tasa de fecundidad',
     data: [0, 0, 0,0],
     backgroundColor: [
       'rgb(45, 139, 186)',
@@ -121,12 +121,29 @@ const dataPaso3 = {
 var chartPaso3Act = new Chart(chartPaso3, {
     type: 'bar',
     data: dataPaso3,
+    height: 500,
     options:{
       plugins: {
         legend: {
+          display: false,
           labels:{
-            boxWidth: 10,
-          }
+            
+          }        
+        },
+        tooltip: {
+          callbacks: {
+          label: function(context){
+            let label = 'Cantidad';
+
+            if (label) {
+                label += ': ';
+            }
+            if (context.parsed.y !== null) {
+                label += new Intl.NumberFormat("de-DE").format(context.parsed.y);
+            }
+            return label;
+          },
+        }
         }
       },
     }

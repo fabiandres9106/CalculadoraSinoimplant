@@ -96,27 +96,29 @@ fetch('https://eduniversal.com.co/sinoimplant/bbdd/qMunicipiosData.php')
 // Chart Paso 3
 
 const chartPaso3 = document.getElementById('chartPaso3');
-const dataTasaFecunidad = document.getElementById('inmujFertiles');
+//const dataTasaFecunidad = document.getElementById('inmujFertiles');
 
 const dataPaso3 = {
   labels: [
+    'Tasa fecundidad',
     'Embarazos no intencionales',
     'Mortalidad Materna',
     'Mortalidad Materna no deseados'
   ],
   datasets: [{
     label: 'My First Dataset',
-    data: [dataTasaFecunidad, 50, 100],
+    data: [0, 0, 0,0],
     backgroundColor: [
       'rgb(45, 139, 186)',
       'rgb(65, 184, 213)',
+      'rgb(87, 211, 255)',
       'rgb(87, 211, 255)'
     ],
     hoverOffset: 4
   }]
 }
 
-new Chart(chartPaso3, {
+var chartPaso3Act = new Chart(chartPaso3, {
     type: 'bar',
     data: dataPaso3,
     options:{

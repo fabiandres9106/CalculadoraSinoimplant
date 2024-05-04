@@ -109,10 +109,10 @@ const dataPaso3 = {
     label: 'Tasa de fecundidad',
     data: [0, 0, 0,0],
     backgroundColor: [
-      'rgb(45, 139, 186)',
-      'rgb(65, 184, 213)',
-      'rgb(87, 211, 255)',
-      'rgb(87, 211, 255)'
+      'rgb(46, 204, 113)',
+      'rgb(243, 156, 18)',
+      'rgb(231, 76, 48)',
+      'rgb(125, 60, 152)'
     ],
     hoverOffset: 4
   }]

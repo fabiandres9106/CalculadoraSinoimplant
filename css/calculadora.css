@@ -136,10 +136,6 @@ min-height: 50vh;
   min-height: 70px;
 }
 
-.card-title{
-  padding-bottom: rem;
-}
-
 .card-title.logo-sinoimplant{
   font-size: 2rem;
 }
@@ -199,6 +195,26 @@ table.table-calculadora{
 }
 
 /* Paso 5*/
+
+.title-paso5{
+  text-align: left;
+  padding: 1rem 0;
+}
+
+.title-paso5 .sinoimplant-paso5{
+  color: #AA0061;
+}
+
+.title-paso5 h4{
+  font-size: 1.5rem;
+  margin-block-end: 0;
+}
+
+.title-paso5 h3{
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-block-end: 0;
+}
 
 .info-paso5{
   padding: 1rem;

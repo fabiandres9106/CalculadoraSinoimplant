@@ -233,36 +233,64 @@ function actualizarGastos(){
     totUCI.innerHTML=parseInt(inValUUCI.value*cantidadUCI.value).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     intotUCI.value=inValUUCI.value*cantidadUCI.value;
 
-    costEmbNoDesSI.innerHTML=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));
-    incostEmbNoDesSI.value=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));
-    costEmbNoDesJad.innerHTML=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));
-    incostEmbNoDesJad.value=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));
-    costEmbNoDesImp.innerHTML=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));
-    incostEmbNoDesImp.value=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));
+    //Data embarazos no deseados
+    var datacostEmbNoDesSI=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value))
+    costEmbNoDesSI.innerHTML=datacostEmbNoDesSI;
+    incostEmbNoDesSI.value=datacostEmbNoDesSI;
 
-    costMortMatNoDesSI.innerHTML=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value);
-    incostMortMatNoDesSI.value=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value);
-    costMortMatNoDesJad.innerHTML=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value);
-    incostMortMatNoDesJad.value=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value);
-    costMortMatNoDesImp.innerHTML=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value);
-    incostMortMatNoDesImp.value=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value);
+    var datacostEmbNoDesJad=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));
+    costEmbNoDesJad.innerHTML=datacostEmbNoDesJad;
+    incostEmbNoDesJad.value=datacostEmbNoDesJad;
 
-    costPrevSI.innerHTML=parseInt(inembNoIntencionales.value)*parseInt(incostAnualSI.value);
-    incostPrevSI.value=parseInt(inembNoIntencionales.value)*parseInt(incostAnualSI.value);
-    costPrevJad.innerHTML=parseInt(inembNoIntencionales.value)*parseInt(incostAnualJad.value);
-    incostPrevJad.value=parseInt(inembNoIntencionales.value)*parseInt(incostAnualJad.value);
-    costPrevImp.innerHTML=parseInt(inembNoIntencionales.value)*parseInt(incostAnualImp.value);
-    incostPrevImp.value=parseInt(inembNoIntencionales.value)*parseInt(incostAnualImp.value);
+    var datacostEmbNoDesImp=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value))
+    costEmbNoDesImp.innerHTML=datacostEmbNoDesImp;
+    incostEmbNoDesImp.value=datacostEmbNoDesImp;
 
-    ahorroSI.innerHTML=parseInt(incostPrevSI.value)-(parseInt(incostEmbNoDesSI.value)+parseInt(incostMortMatNoDesSI.value));
-    inahorroSI.value=parseInt(incostPrevSI.value)-(parseInt(incostEmbNoDesSI.value)+parseInt(incostMortMatNoDesSI.value));
-    ahorroJad.innerHTML=parseInt(incostPrevJad.value)-(parseInt(incostEmbNoDesJad.value)+parseInt(incostMortMatNoDesJad.value));
-    inahorroJad.value=parseInt(incostPrevJad.value)-(parseInt(incostEmbNoDesJad.value)+parseInt(incostMortMatNoDesJad.value));
-    ahorroImp.innerHTML=parseInt(incostPrevImp.value)-(parseInt(incostEmbNoDesImp.value)+parseInt(incostMortMatNoDesImp.value));
-    inahorroImp.value=parseInt(incostPrevImp.value)-(parseInt(incostEmbNoDesImp.value)+parseInt(incostMortMatNoDesImp.value));
+    //Data costo mortalidad materna no deseados
+    var datacostMortMatNoDesSI=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value)
+    costMortMatNoDesSI.innerHTML=datacostMortMatNoDesSI;
+    incostMortMatNoDesSI.value=datacostMortMatNoDesSI;
 
-    SIvsJad.innerHTML=parseInt(incostPrevSI.value)-parseInt(incostPrevJad.value);
-    inSIvsJad.value=parseInt(incostPrevSI.value)-parseInt(incostPrevJad.value);
-    SIvsImp.innerHTML=parseInt(incostPrevSI.value)-parseInt(incostPrevImp.value);
-    SIvsImp.value=parseInt(incostPrevSI.value)-parseInt(incostPrevImp.value);
+    var datacostMortMatNoDesJad=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value)
+    costMortMatNoDesJad.innerHTML=datacostMortMatNoDesJad;
+    incostMortMatNoDesJad.value=datacostMortMatNoDesJad;
+
+    var datacostMortMatNoDesImp = (parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value)
+    costMortMatNoDesImp.innerHTML=datacostMortMatNoDesImp;
+    incostMortMatNoDesImp.value=datacostMortMatNoDesImp;
+
+    //Data costo prevenir los no deseados
+    var datacostPrevSI=parseInt(inembNoIntencionales.value)*parseInt(incostAnualSI.value)
+    costPrevSI.innerHTML=datacostPrevSI;
+    incostPrevSI.value=datacostPrevSI;
+
+    var datacostPrevJad=parseInt(inembNoIntencionales.value)*parseInt(incostAnualJad.value);
+    costPrevJad.innerHTML=datacostPrevJad;
+    incostPrevJad.value=datacostPrevJad;
+
+    var datacostPrevImp=parseInt(inembNoIntencionales.value)*parseInt(incostAnualImp.value)
+    costPrevImp.innerHTML=datacostPrevImp;
+    incostPrevImp.value=datacostPrevImp;
+
+    //Data ahorro
+    var dataahorroSI=parseInt(incostPrevSI.value)-(parseInt(incostEmbNoDesSI.value)+parseInt(incostMortMatNoDesSI.value));
+    ahorroSI.innerHTML=dataahorroSI;
+    inahorroSI.value=dataahorroSI;
+
+    var dataahorroJad=parseInt(incostPrevJad.value)-(parseInt(incostEmbNoDesJad.value)+parseInt(incostMortMatNoDesJad.value));
+    ahorroJad.innerHTML=dataahorroJad;
+    inahorroJad.value=dataahorroJad;
+
+    var dataahorroImp=parseInt(incostPrevImp.value)-(parseInt(incostEmbNoDesImp.value)+parseInt(incostMortMatNoDesImp.value));
+    ahorroImp.innerHTML=dataahorroImp;
+    inahorroImp.value=dataahorroImp;
+
+    // Comparativos
+    var dataSIvsJad=parseInt(incostPrevSI.value)-parseInt(incostPrevJad.value);
+    SIvsJad.innerHTML=dataSIvsJad;
+    inSIvsJad.value=dataSIvsJad;
+
+    var dataSIvsImp=parseInt(incostPrevSI.value)-parseInt(incostPrevImp.value);
+    SIvsImp.innerHTML=dataSIvsImp;
+    SIvsImp.value=dataSIvsImp;
 }

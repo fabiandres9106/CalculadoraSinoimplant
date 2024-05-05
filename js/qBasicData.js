@@ -235,62 +235,62 @@ function actualizarGastos(){
 
     //Data embarazos no deseados
     var datacostEmbNoDesSI=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value))
-    costEmbNoDesSI.innerHTML=datacostEmbNoDesSI;
+    costEmbNoDesSI.innerHTML=parseInt(datacostEmbNoDesSI).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostEmbNoDesSI.value=datacostEmbNoDesSI;
 
     var datacostEmbNoDesJad=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value));
-    costEmbNoDesJad.innerHTML=datacostEmbNoDesJad;
+    costEmbNoDesJad.innerHTML=parseInt(datacostEmbNoDesJad).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostEmbNoDesJad.value=datacostEmbNoDesJad;
 
     var datacostEmbNoDesImp=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value))
-    costEmbNoDesImp.innerHTML=datacostEmbNoDesImp;
+    costEmbNoDesImp.innerHTML=parseInt(datacostEmbNoDesImp).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostEmbNoDesImp.value=datacostEmbNoDesImp;
 
     //Data costo mortalidad materna no deseados
     var datacostMortMatNoDesSI=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value)
-    costMortMatNoDesSI.innerHTML=datacostMortMatNoDesSI;
+    costMortMatNoDesSI.innerHTML=parseInt(datacostMortMatNoDesSI).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostMortMatNoDesSI.value=datacostMortMatNoDesSI;
 
     var datacostMortMatNoDesJad=(parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value)
-    costMortMatNoDesJad.innerHTML=datacostMortMatNoDesJad;
+    costMortMatNoDesJad.innerHTML=parseInt(datacostMortMatNoDesJad).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostMortMatNoDesJad.value=datacostMortMatNoDesJad;
 
     var datacostMortMatNoDesImp = (parseInt(intotPar.value)+parseInt(intotUCI.value))*parseInt(inmortMatNoDeseados.value)
-    costMortMatNoDesImp.innerHTML=datacostMortMatNoDesImp;
+    costMortMatNoDesImp.innerHTML=parseInt(datacostMortMatNoDesImp).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostMortMatNoDesImp.value=datacostMortMatNoDesImp;
 
     //Data costo prevenir los no deseados
     var datacostPrevSI=parseInt(inembNoIntencionales.value)*parseInt(incostAnualSI.value)
-    costPrevSI.innerHTML=datacostPrevSI;
+    costPrevSI.innerHTML=parseInt(datacostPrevSI).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostPrevSI.value=datacostPrevSI;
 
     var datacostPrevJad=parseInt(inembNoIntencionales.value)*parseInt(incostAnualJad.value);
-    costPrevJad.innerHTML=datacostPrevJad;
+    costPrevJad.innerHTML=parseInt(datacostPrevJad).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostPrevJad.value=datacostPrevJad;
 
     var datacostPrevImp=parseInt(inembNoIntencionales.value)*parseInt(incostAnualImp.value)
-    costPrevImp.innerHTML=datacostPrevImp;
+    costPrevImp.innerHTML=parseInt(datacostPrevImp).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     incostPrevImp.value=datacostPrevImp;
 
     //Data ahorro
     var dataahorroSI=parseInt(incostPrevSI.value)-(parseInt(incostEmbNoDesSI.value)+parseInt(incostMortMatNoDesSI.value));
-    ahorroSI.innerHTML=dataahorroSI;
+    ahorroSI.innerHTML=parseInt(dataahorroSI).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     inahorroSI.value=dataahorroSI;
 
     var dataahorroJad=parseInt(incostPrevJad.value)-(parseInt(incostEmbNoDesJad.value)+parseInt(incostMortMatNoDesJad.value));
-    ahorroJad.innerHTML=dataahorroJad;
+    ahorroJad.innerHTML=parseInt(dataahorroJad).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     inahorroJad.value=dataahorroJad;
 
     var dataahorroImp=parseInt(incostPrevImp.value)-(parseInt(incostEmbNoDesImp.value)+parseInt(incostMortMatNoDesImp.value));
-    ahorroImp.innerHTML=dataahorroImp;
+    ahorroImp.innerHTML=parseInt(dataahorroImp).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     inahorroImp.value=dataahorroImp;
 
     // Comparativos
     var dataSIvsJad=parseInt(incostPrevSI.value)-parseInt(incostPrevJad.value);
-    SIvsJad.innerHTML=dataSIvsJad;
+    SIvsJad.innerHTML=parseInt(dataSIvsJad).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     inSIvsJad.value=dataSIvsJad;
 
     var dataSIvsImp=parseInt(incostPrevSI.value)-parseInt(incostPrevImp.value);
-    SIvsImp.innerHTML=dataSIvsImp;
+    SIvsImp.innerHTML=parseInt(dataSIvsImp).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     SIvsImp.value=dataSIvsImp;
 }

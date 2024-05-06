@@ -1,6 +1,7 @@
 // SLIDE 1
 
 
+/*
 $(document).ready(function(){
 
   $('#btnIngresar').click(function(e){
@@ -13,9 +14,9 @@ $(document).ready(function(){
       $('#calculadora-navegacion').removeClass('visually-hidden');
   })
 })
+*/
 
 
-/*
 const btnIngresar = document.getElementById('btnIngresar');
 btnIngresar.addEventListener('click', function () {
   const tab2Link = document.getElementById('pills-Paso2-tab');
@@ -23,7 +24,7 @@ btnIngresar.addEventListener('click', function () {
   const navCalculadora = document.getElementById('calculadora-navegacion');
   navCalculadora.classList.remove("visually-hidden")
 });
-*/
+
 
 // Selector input entidad o municipio
 const selectEntidad = document.getElementById('selectTipoEntidad');

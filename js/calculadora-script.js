@@ -18,7 +18,8 @@ $(document).ready(function(){
 
 
 const btnIngresar = document.getElementById('btnIngresar');
-btnIngresar.addEventListener('click', function () {
+btnIngresar.addEventListener('click', function (e) {
+  e.preventDefault();
   const tab2Link = document.getElementById('pills-Paso2-tab');
   tab2Link.dispatchEvent(new Event('click'));
   const navCalculadora = document.getElementById('calculadora-navegacion');

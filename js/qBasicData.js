@@ -173,19 +173,19 @@ function procesarEventoLoadBasicData(){
 function calcular(){
     intasaFecundidad.value=datos.tasaFecundidad;
     inmujFertiles.value=Math.round(cantidadMujeres.value*datos.tasaFecundidad/100);
-    mujFertiles.innerHTML=Math.round(cantidadMujeres.value*datos.tasaFecundidad/100);
+    mujFertiles.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(cantidadMujeres.value*datos.tasaFecundidad/100));
 
     intasaembNoIntencionales.value=datos.tasaEmbarazosNoIntencionales;
     inembNoIntencionales.value=Math.round(inmujFertiles.value*datos.tasaEmbarazosNoIntencionales/1000);
-    embNoIntencionales.innerHTML=Math.round(inmujFertiles.value*datos.tasaEmbarazosNoIntencionales/1000);
+    embNoIntencionales.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(inmujFertiles.value*datos.tasaEmbarazosNoIntencionales/1000));
 
     intasamortMaterna.value=datos.tasaMortalidadMaterna;
     inmortMaterna.value=Math.round(inmujFertiles.value*datos.tasaMortalidadMaterna/100000);
-    mortMaterna.innerHTML=Math.round(inmujFertiles.value*datos.tasaMortalidadMaterna/100000);
+    mortMaterna.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(inmujFertiles.value*datos.tasaMortalidadMaterna/100000));
 
     intasamortMatNoDeseados.value=datos.tasaMortalidadMaternaNoDeseados;
     inmortMatNoDeseados.value=Math.round(inembNoIntencionales.value*datos.tasaMortalidadMaternaNoDeseados/100000);
-    mortMatNoDeseados.innerHTML=Math.round(inembNoIntencionales.value*datos.tasaMortalidadMaternaNoDeseados/100000);
+    mortMatNoDeseados.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(inembNoIntencionales.value*datos.tasaMortalidadMaternaNoDeseados/100000));
 
     // ACTUALIZAR GRÁFICO PASO 3 - ESTADÍSTICAS MUJERES
     var val1 = parseFloat(inmujFertiles.value) || 0;

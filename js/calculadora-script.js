@@ -1,8 +1,9 @@
 // SLIDE 1
 
+
 $(document).ready(function(){
 
-  $('#btnIngresar').click(function(){
+  $('#btnIngresar').click(function(e){
       //cambiar de tab
       $('.tab-pane').removeClass('show active');
       $('#pills-Paso2').addClass('show active');

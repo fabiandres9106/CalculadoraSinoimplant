@@ -97,8 +97,8 @@ fetch('https://eduniversal.com.co/sinoimplant/bbdd/qMunicipiosData.php')
     //Procesar la data recibida en JSON y alimentar el SELECT munSel
     for (const municipio in data) {
       const option = document.createElement('option');
-      option.value = data[municipio];
-      option.textContent = municipio;
+      option.value = data[municipio].cantMujeres;
+      option.textContent = data[municipio].municipio;
       municipiosSelect.appendChild(option);
     }
   })

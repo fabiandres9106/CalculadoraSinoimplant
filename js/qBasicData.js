@@ -154,7 +154,7 @@ function procesarEventoLoadBasicData(){
         datos=JSON.parse(conexion.responseText);
         tasaFecundidad.innerHTML=datos.tasaFecundidad;
         tasaembNoIntencionales.innerHTML=datos.tasaEmbarazosNoIntencionales;
-        tasamortMaterna.innerHTML=datos.tasaMortalidadMaterna;
+        tasamortMaterna.value=datos.tasaMortalidadMaterna;
         tasamortMatNoDeseados.innerHTML=datos.tasaMortalidadMaternaNoDeseados;
         valUDH.innerHTML=parseInt(datos.hosp1).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
         valUUCI.innerHTML=parseInt(datos.uci).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});

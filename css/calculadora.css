@@ -200,6 +200,10 @@ table.table-calculadora{
 
 /* Paso 5*/
 
+.titulos-costos p{
+  font-size: .8rem;
+}
+
 .title-paso5{
   text-align: left;
   padding: 1rem 0;

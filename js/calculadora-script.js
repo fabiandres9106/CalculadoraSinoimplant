@@ -108,6 +108,10 @@ fetch('https://eduniversal.com.co/sinoimplant/bbdd/qMunicipiosData.php')
     console.error('Error al obtener el JSON: ', error);
   })
 
+// Calcular según el valor de tasa mortalidad materna
+
+//const mortalidadmaterna = document.getElementById("")
+
 // Chart Paso 3
 
 const chartPaso3 = document.getElementById('chartPaso3');

@@ -101,7 +101,7 @@ fetch('https://eduniversal.com.co/sinoimplant/bbdd/qMunicipiosData.php')
       option.textContent = data[municipio].municipio;
       municipiosSelect.appendChild(option);
 
-      console.log(municipio + " " + data[municipio].cantMujeres + " " + data[municipio].municipio);
+      //console.log(municipio + " " + data[municipio].cantMujeres + " " + data[municipio].municipio);
     }
   })
   .catch(error => {

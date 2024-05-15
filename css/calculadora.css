@@ -175,6 +175,10 @@ table.table-calculadora{
   padding: 1rem;
 }
 
+#tasamortMaterna{
+  width: 50px;
+}
+
 /* Paso 4*/
 .table-paso4{
   border-radius: 10px;

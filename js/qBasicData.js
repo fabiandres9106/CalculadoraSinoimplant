@@ -59,6 +59,8 @@ var intasamortMatNoDeseados=document.getElementById('intasamortMatNoDeseados');
 var mortMatNoDeseados=document.getElementById('mortMatNoDeseados');
 var inmortMatNoDeseados=document.getElementById('inmortMatNoDeseados');
 
+tasamortMaterna.addEventListener('keyup', actualizarMortNoDeseados, false);
+
 var hospLevel=document.getElementById('hospLevel');
 var riskPr=document.getElementById('riskPr');
 
@@ -149,6 +151,10 @@ function actualizarCostoImp(){
     incostAnualImp.value=parseInt(incostTotalImp.value)/parseInt(induracionImp.value);
     costAnualImp.innerHTML=valCostoAnualImp.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'}); 
 }
+function actualizarMortNoDeseados(){
+    console.log(tasamortMaterna.value);
+    tasamortMatNoDeseados.innerHTML=tasamortMaterna.value;
+} 
 function procesarEventoLoadBasicData(){
     if(conexion.readyState==4){
         datos=JSON.parse(conexion.responseText);

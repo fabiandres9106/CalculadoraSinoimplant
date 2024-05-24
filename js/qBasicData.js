@@ -75,6 +75,7 @@ var inValUPar=document.getElementById('inValUPar');
 var cantidadParto=document.getElementById('cantidadParto');
 var totPar=document.getElementById('totPar');
 var intotPar=document.getElementById('intotPar');
+var totalHosp=document.getElementById('totalHosp')
 
 hospLevel.addEventListener('change',actualizarGastos,false);
 riskPr.addEventListener('change',actualizarGastos,false);
@@ -181,6 +182,9 @@ function procesarEventoLoadBasicData(){
         intotDH.value=datos.hosp1*1;
         intotUCI.value=datos.uci*0;
         intotPar.value=datos.parto*1;
+
+        var valTotalHosp = parseInt(intotDH.value)+parseInt(intotUCI.value)+parseInt(intotPar.value);
+        totalHosp.innerHTML=parseInt(valTotalHosp).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     }
 }
 function calcular(){
@@ -246,6 +250,9 @@ function actualizarGastos(){
     intotDH.value=inValUDH.value*cantidadDiasHosp.value;
     totUCI.innerHTML=parseInt(inValUUCI.value*cantidadUCI.value).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
     intotUCI.value=inValUUCI.value*cantidadUCI.value;
+    var valTotalHosp = parseInt(intotDH.value)+parseInt(intotUCI.value)+parseInt(intotPar.value);
+    console.log(valTotalHosp);
+    totalHosp.innerHTML=parseInt(valTotalHosp).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
 
     //Data embarazos no deseados
     var datacostEmbNoDesSI=(parseInt(intotDH.value)+parseInt(intotPar.value))*(parseInt(inembNoIntencionales.value)-parseInt(inmortMatNoDeseados.value))

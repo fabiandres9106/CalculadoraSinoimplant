@@ -1,8 +1,4 @@
-addEventListener('load',actualizarDatos,false);
-addEventListener('load',probar,false);
-function probar(){
-    //console.log('probando');
-}
+
 
 var shEjecutivoEmpresa=document.getElementById('shEjecutivoEmpresa');
 var shEjecutivo=document.getElementById('shEjecutivo');
@@ -115,6 +111,12 @@ var inSIvsJad=document.getElementById('inSIvsJad');
 var SIvsImp=document.getElementById('SIvsImp');
 var inSIvsImp=document.getElementById('inSIvsImp');
 
+addEventListener('load',actualizarDatos,false);
+addEventListener('load',probar,false);
+function probar(){
+    //console.log('probando');
+}
+
 var conexion;
 function actualizarDatos(){
     conexion=new XMLHttpRequest();
@@ -152,8 +154,12 @@ function actualizarCostoImp(){
     costAnualImp.innerHTML=valCostoAnualImp.toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'}); 
 }
 function actualizarMortNoDeseados(){
-    console.log(tasamortMaterna.value);
+    //console.log(tasamortMaterna.value);
     tasamortMatNoDeseados.innerHTML=tasamortMaterna.value;
+    inmortMaterna.value=tasamortMaterna.value;
+    intasamortMaterna.value=tasamortMaterna.value;
+    inmortMatNoDeseados.value=tasamortMaterna.value;
+    calcular();
 } 
 function procesarEventoLoadBasicData(){
     if(conexion.readyState==4){
@@ -161,6 +167,7 @@ function procesarEventoLoadBasicData(){
         tasaFecundidad.innerHTML=datos.tasaFecundidad;
         tasaembNoIntencionales.innerHTML=datos.tasaEmbarazosNoIntencionales;
         tasamortMaterna.value=datos.tasaMortalidadMaterna;
+        intasamortMaterna.value=datos.tasaMortalidadMaterna;
         tasamortMatNoDeseados.innerHTML=datos.tasaMortalidadMaternaNoDeseados;
         valUDH.innerHTML=parseInt(datos.hosp1).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
         valUUCI.innerHTML=parseInt(datos.uci).toLocaleString('es-CO', { maximumFractionDigits: 0, style: 'currency', currency: 'COP'});
@@ -185,13 +192,14 @@ function calcular(){
     inembNoIntencionales.value=Math.round(inmujFertiles.value*datos.tasaEmbarazosNoIntencionales/1000);
     embNoIntencionales.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(inmujFertiles.value*datos.tasaEmbarazosNoIntencionales/1000));
 
-    intasamortMaterna.value=datos.tasaMortalidadMaterna;
-    inmortMaterna.value=Math.round(inmujFertiles.value*datos.tasaMortalidadMaterna/100000);
-    mortMaterna.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(inmujFertiles.value*datos.tasaMortalidadMaterna/100000));
+    //intasamortMaterna.value=datos.tasaMortalidadMaterna;
+    
+    inmortMaterna.value=Math.round(inmujFertiles.value*intasamortMaterna.value/100000);
+    mortMaterna.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(inmujFertiles.value*intasamortMaterna.value/100000));
 
-    intasamortMatNoDeseados.value=datos.tasaMortalidadMaternaNoDeseados;
-    inmortMatNoDeseados.value=Math.round(inembNoIntencionales.value*datos.tasaMortalidadMaternaNoDeseados/100000);
-    mortMatNoDeseados.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(inembNoIntencionales.value*datos.tasaMortalidadMaternaNoDeseados/100000));
+    //intasamortMatNoDeseados.value=datos.tasaMortalidadMaternaNoDeseados;
+    inmortMatNoDeseados.value=Math.round(inembNoIntencionales.value*intasamortMaterna.value/100000);
+    mortMatNoDeseados.innerHTML=new Intl.NumberFormat("de-DE").format(Math.round(inembNoIntencionales.value*intasamortMaterna.value/100000));
 
     // ACTUALIZAR GRÁFICO PASO 3 - ESTADÍSTICAS MUJERES
     var val1 = parseFloat(inmujFertiles.value) || 0;
